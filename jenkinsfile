@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/chaithanya33/portfilo.git',
+                    credentialsId: 'chaithu-github'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building Portfolio...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh '''
+                echo "Deploying portfolio to Nginx..."
+                sudo cp index.html /usr/share/nginx/html/index.html
+                sudo systemctl restart nginx
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Portfolio deployment successful!'
+        }
+        failure {
+            echo 'Portfolio deployment failed!'
+        }
+    }
+}
+
