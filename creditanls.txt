@@ -1,0 +1,179 @@
+<role rolename="manager-gui"/>
+<user username="tomcat" password="admin" roles="manager-gui"/>
+___________________________________________________________________________________________________________________________________
+nexus username : admin
+nexus password also admin
+
+________________________
+
+1  clear
+    2  yum install java-11-amazon-corretto -y
+    3  useradd nexus
+    4  cd nexus
+    5  ls
+    6  exit
+    7  cd nexus
+    8  ls
+    9  sudo mkdir /app && cd /app
+   10  wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+   11  sudo wget https://download.sonatype.com/nexus/3/nexus-3.79.1-04-linux-x86_64.tar.gz
+   12  sudo tar -xvf nexus-3.79.1-04-linux-x86_64.tar.gz
+   13  sudo mv nexus-3.79.1-04 nexus
+   14  sudo adduser nexus
+   15  sudo chown -R nexus:nexus /app/nexus
+   16  sudo chown -R nexus:nexus /app/sonatype*
+   17  ls18  cd nexus 
+    18  cd nexus
+
+   19  sudo chown -R nexus:nexus /app/nexus
+   20  sudo chown -R nexus:nexus /app/sonatype*
+   21  pwd
+   22  ls
+   23  cd bin
+   24  ls
+   25  vi nexus
+   26  vi /etc/systemd/system/nexus.service
+   27  sudo chkconfig nexus on
+   28  sudo systemctl start nexus
+   29  sudo systemctl enable nexus
+   30  sudo chkconfig nexus on
+   31  sudo systemctl start nexus
+   32  sudo systemctl enable nexus
+   33  sudo systemctl status nexus
+   34  pwd
+   35  ls
+   36  vi /etc/systemd/system/nexus.service
+   37  vi nexus
+   38  pwd
+   39  vi nexus
+   40  systemctl enable nexus
+   41  systemctl restart nexus
+   42  systemctl status nexus
+   43  cat /app/sonatype-work/nexus3/admin.password
+   44  clear
+   45  cat /app/sonatype-work/nexus3/admin.password
+   46  history
+   47  history'
+
+
+__________________________________________________________________________________________________________________________
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube8.9.6.50800.zip
+
+sonar qube  details
+
+user; admin
+password
+chaithanya23
+_______________________________________________________________________________________________________________________________
+
+Jenkins credentials
+
+user ;chaithu
+password :chaithanya23  
+
+
+
+
+
+clear
+    2  yum install java-11-amazon-corretto -y
+    3  useradd nexus
+    4  cd nexus
+    5  ls
+    6  exit
+    7  cd nexus
+    8  ls
+    9  sudo mkdir /app && cd /app
+   10  wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+   11  sudo wget https://download.sonatype.com/nexus/3/nexus-3.79.1-04-linux-x86_64.tar.gz
+   12  sudo tar -xvf nexus-3.79.1-04-linux-x86_64.tar.gz
+   13  sudo mv nexus-3.79.1-04 nexus
+   14  sudo adduser nexus
+   15  sudo chown -R nexus:nexus /app/nexus
+   16  sudo chown -R nexus:nexus /app/sonatype*
+   17  ls
+   18  cd nexus
+   19  sudo chown -R nexus:nexus /app/nexus
+   20  sudo chown -R nexus:nexus /app/sonatype*
+   21  pwd
+   22  ls
+   23  cd bin
+   24  ls
+   25  vi nexus
+   26  vi /etc/systemd/system/nexus.service
+   27  sudo chkconfig nexus on
+   28  sudo systemctl start nexus
+   29  sudo systemctl enable nexus
+   30  sudo chkconfig nexus on
+   31  sudo systemctl start nexus
+   32  sudo systemctl enable nexus
+   33  sudo systemctl status nexus
+   34  pwd
+   35  ls
+   36  vi /etc/systemd/system/nexus.service
+   37  vi nexus
+   38  pwd
+   39  vi nexus
+   40  systemctl enable nexus
+   41  systemctl restart nexus
+   42  systemctl status nexus
+   43  cat /app/sonatype-work/nexus3/admin.password
+   44  clear
+   45  cat /app/sonatype-work/nexus3/admin.password
+   46  history'
+
+   47  history
+
+_______________________________________________________________________________________________________________________________
+
+
+
+tomcat 
+
+
+
+
+  ls
+    2  cd tomcat
+    3  ls
+    4  cd webapps
+    5  ls
+    6  cd host-manager 
+    7  ls
+    8  cd META-INF 
+    9  ls
+   10  vi context.xml
+   11  ls
+   12  cd ..
+   13  ls
+   14  cd ..
+   15  ls
+   16  cd manager
+   17  ls
+   18  cd META-INF 
+   19  ls
+   20  vi context.xml
+   21   cd ../../..
+   22  ls
+   23  cd bin
+   24  ls
+   25  sh shutdown.sh
+   26  sh startup.sh
+   27  clear
+   28  ls
+   29  cd ..
+   30  ls
+   31  cd conf
+   32  ls
+   33  vi tomcat-users.xml
+   34  history
+[root@ip-172-
+_______________________________________________________________________________________________________________________________________________
+
+
+___________________________________________________________________________________________________________
+
+nexus commands 
+
+
+

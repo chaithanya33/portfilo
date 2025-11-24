@@ -1,0 +1,805 @@
+everday class :
+
+
+05-8-2025
+
+topic: wc file name ,   
+       
+        
+____________________________________________________________________________________________________________________      
+networking commands : , ping , diff two files, whois domain(yum install whois -y)
+fi
+dig domain , neststat -pnltu(yum net-tools)
+tcp/transcation /   udp/streaming //
+
+if config , tomcat download, we get, curl , traceroute ,mtr domain  ,nmap ,
+system ,cal ,date, uptime ,w, whoiam, uname -a ,df -h, ,du -h, free -m ,
+____________________________________________________________________________________________________________________________________________________________
+INSTANCE LAUNCH TYPES : FOUR // 1) ON DEMAND INSTANCE 2)RESERVED INSTANCE 3)SPOT INSTANCE 4) DEDICATED INSTANCE 
+
+1) ON DEMAND INSTANCE :
+
+WHEN EVER YOU WANT YOU WILL USE IT SUCH KIND OF INSTANCE ARE CALLED ON DEMAND INSTANCES .
+
+* FIXED PRICE (HOURLY BASIS)
+* PAY FOR WHAT YOU HAVE USED 
+* NO COMMITEMENT
+* NO PRIOR PAYMENT
+* NO PREDICTABLE USAGE
+
+2) RESERVED INSTANCE  : LONG TERM COMMITEMENT
+
+*PERIOR OR PARTIAL PAYMENT REQUIRED 
+* 1  TO 3 YEARS 
+* 75% DISCOUNT ON HOURLY PRICE 
+* PERDICTABLE USAGE 
+
+3) SPOT INSTANCE :  BIDDING OR (AUCTIONING )
+
+*HUGE CAPAICITY FOR CHEAPER PRICE
+
+4) DEDICATED INSTANCE : SERVER MOTHAMU SAME COMPANY KE ISTARU
+
+*IF ANY CUSTOMER NEED DEDICATED PHYSICAL MACHINE
+* LICENSED BASED SOFTWARE (ENTIRE SERVER KAVALANTA )
+
+NOTE : AWS MINIMUM BILLING PERIOD IS 1 HOUR
+_____________________________________________________________________
+EC2 INSTANCE STATE : LAUNCH STATE , PENDING STATE ,RUNNING STATE, STOP STATE, REBOOT STATE ,TERMINATE STATE
+
+
+EC2 INSTANCE FAMILY TYPES :6
+
+*EC2 PROVIDES WIDE SELECTION OF INSTANCE TYPES THAT ARE OPTMIZED
+
+*INSTANCE TYPES VARYING COMBINATION OF CPU,MEMORY,STORAGE AND NETWORK
+
+*EACH INSTANCE TYPES CAN BE DIVIDED INTO FOLLOWING 
+
+1)GENERAL PURPOSE (information related websites)
+
+2)COMPUTE OPTIMIZED (gaming or machine learning )
+
+3)MEMORY OPTIMIZED  (data analytics , big data ,large data sets)
+
+4)STORAGE OPTIMIZED ( database lot of information saved in it)
+
+5)ACCLERATED OPTIMZED (floating point number or big caluclations , computational ,finance ,performance computing )
+
+6)HPC (high performance compute OPTIMIZED): ( all above in one place lo server lo untiye)
+
+____________________________________________________________________________________________________________________________________________________________
+
+
+
+   
+
+
+
+
+
+
+
+
+
+8-08-2025
+lsls
+today : EBS 
+  once u increase volume size we need to know wait 6 hours to increase the volume  size again //questions oksarie increase ayyika decrease cheskovacha volume //and billing padtidee //  lsblk 
+
+
+1)df -hT
+2)lsblk 
+3)file -s /dev/  xvdb/nam what u create in ebs  add data
+4) mkfs -t xfs /dev/xvdb (file path or name )
+5)mkdir -p (create nested directory)
+7)after mount /dev/xvdb  dir1/dir2(nested director two names)
+8)df -h (u can see extra storage to server)
+
+__________________________________________________________________________________________________________________________________________________________________________
+elastic file system (it is nleetwork attached storage):efs provides simple serverless set and forget elastic file system for aws services and on premisis
+
+it is built to  scale on demand (it is petabytes ) without disrupting applications growing and shrinking automatically u can add and remove files in ec2 instances ..
+
+NFS (NETWORK FILE SYSTEM):
+  
+it is a networking protocol for distributed file sharing across multiple zones u can create a new server with in same subnets and sg u can find files in both servers
+
+efs uses the network file system version4 protocol
+
+ebs does not support physicial server or on premis server
+
+
+__________________________________________________________________________________________________________________________________________________________________________
+
+13/08/25 :topic : 1) vpc (virtual private cloud) 2)what are ip address 3)different types of ip address //
+ 
+# ip address: As we know ip address is a unique number which is provided to each and every device
+
+ip address are two types 1)ipv4   2) ipv6 
+
+ipv4 : 1)the length of ipv4 is 32 bit 
+
+2)in ipv4 around 4 billion uniqe address are generated 2 power 32
+
+3) the range of ipv4 is 0 to 255 
+ex: 192.255.108.253
+4) it consist has 4 octets each has 8 bits
+5)ipv4 is a numeric address separated by .(dot)
+6) ipv4 have 5 classes { class A , class B , class C , class D and class E}
+
+upto A TO class C  {mobile ips , tab ips , laptop ips, desktop ips}
+
+for class D is live telecast & newsgroups 
+
+for class E is research and development 
+
+class range :
+
+             class A : 0 - 127 
+
+             class B : 128 - 191
+  
+             class c : 192 - 223
+          
+             class D : 224 - 239
+   
+             class E : 240 - 255 
+
+
+      #  for ex: 126/ .123.76.64 (only first path count) #
+
+
+
+ipv6 : the ipv6 length is 64 bit
+
+      2) ipv6 around 340 trillion unique ip address are generated  2 power 128
+
+      3) the range of ipv6 address is 0 to FFFF (65535)
+
+     ex : 2001 :db8 :3333 : 4444 :5555 : 6666 : 7777 : 8888  
+
+      4) it consist of 8 octets each octet has 16 bits
+      
+      5) ipv6 is alphanumeric number separated by colon ( : )
+      
+      6) it doesn't have any classes
+
+
+________________________________________________________________________________________________________________________________________________________________________________________
+VPC ( virtual private cloud ) //partion of vpc is called 2subnets // 
+
+what is vpc ? (interview question)
+
+A ) in vpc these are part of vpc {subnets , internet gateway, route table , nat gateway , security group ,nacal are present in vpc }
+
+{ public subnet means internet connectivity  }
+
+{ private subnet means no internet connectivity }
+
+igw : internet gate way ( from entrance point to anything is called internet gateway)
+
+if igw is attached to route table [ public ] 
+
+ // if do not attached means it is private 
+
+route table : if it is attached to igw it is public or else private 
+
+
+every subnet has associate with a route table 
+
+
+VPC : using vpc we can create isolated network for our project in aws cloud subnets 
+  NOTE : WE WILL LAUNCH AWS RESOURCES USING VPC AND SUBNETS 
+
+when we creating subnets 5 will be missed on this purpose : 
+
+SUBNETS NOTE : 5 IPS WILL RESERVE FOR WHAT PURPOSE 
+
+1){ 10.0.0.255 will reserve for broadcasting (it is blocked for broadcasting)
+ 
+2){ 10.0.0 0 internal router is configure in vpc }
+
+3) { 10.0.0.1 is for network utility }
+
+4) { 10.0.0.2 is reserved for future use }
+
+5) { 10.0.0.3 is reserved for future use } 
+
+_______________________________________________________________________________________________________________________________________________________________________________________
+       
+
+internet gate way (igw) : logical connection between internet and amazon vpc
+
+2) every vpc will have its own internet gate way
+
+3) igw is used to allow incoming and outgoing traffic for vpc
+
+NOTE : IGT WILL ALLOW INSTANCE WITH PUBLIC IP TO ACCESS THE INTERNET
+
+ROUTE TABLE :
+
+        route table is used to configure routing for subnets with vpc
+        
+        every subnet in vpc should connect with routing table
+
+NATE GATEWAY : nat gateway is used to restrict incoming traffic and # allow outgoing traffic in vpc subnets #
+
+2) it allow only one way traffic 
+
+NOTE : NAT WILL ALLOW INSTANCES WITH NO PUBLIC IP TO ACCESS THE INTERNET
+
+SECURITY GROUP :
+  
+
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+creation of vpc :1) create vpc 
+                 2) two subnets (public ,private)
+                 3) internet gateway 1 and attach to vpc (private does not attach to igw if we attached means it makes public access)
+                 4)route tables (2 create public and private)  (edit subnet associates select public and attach and next edit rotes add route2 0000/then select public igw) 2) private create cyalie then associations  with private)
+
+                 5) launch two ec2 servers (public and private) // custom tcp //22 for public instance /in/outbound
+                 6) connect with public instance then create private pem file same in ec2 server name then view private pem key copy the pem key in same then make file only for read permissions (chmod u=r,g=-rw,o=-r (filename) or else chmod 400 filename 
+
+7) ###then copy ssh key in last enter private ##//ip not public ip 
+
+8) if we create nat gateway select //private subnet// connectivity type public/ allowcate elastic ip and it //it allow only one way traffic outgoing
+
+9)after go to routable edit route table then select 0000/select nat gateway(nat network address translate gateway)
+
+
+##  nginx port number is: 80 imp// default part is /usr/share/nginx/html/
+
+
+
+#) VPC PEERING :   👉 VPC Peering is a networking connection between two VPCs (either in the same AWS account or across accounts/regions) that allows them to communicate with each other as if they were within the same network.
+
+that means resources (like EC2 instances, RDS, etc.) in one VPC can talk to resources in the other VPC using private IPs without needing internet gateways, NAT, or VPN.
+
+✅ Example:
+
+You have VPC-A with a web server.
+
+You have VPC-B with a database.
+
+By setting up VPC Peering, the web server in VPC-A can directly talk to the database in VPC-B using private IP communication.
+
+⚠️ Key Points:
+
+It is one-to-one (no transitive peering → if VPC-A is peered with VPC-B, and VPC-B with VPC-C, A cannot talk to C automatically).
+
+You must update route tables in both VPCs to allow traffic.
+
+So in short:
+VPC Peering = direct private communication between two VPCs.
+
+
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+topic 14/08/2025/
+
+
+NAT GATEWAY : 1)is used to restrict incoming traffic and allow outgoing traffic in vpc subnet //2)it allow only one way traffic
+
+NOTE: nat will allow instance with no public ip to access the internet
+
+security group  in ec2 it is instance level security//:
+1) sg is used to configure rules /protocols to allow traffic
+2) sg will not support for deny 
+
+elastic ips  //fiexd ip address we need choose elastic ip for puclic or private instance (in real time we can use elastic ip add for fiexed either public or private)
+
+NACL (NETWORK ACCESS CONTROL LIST )1) NACL is used to configure to deny traffic
+2)nacl will provide additional security for vpc at network level
+____________________________________________________________________________________________________________________________________________________________________________________
+16/08/25 // topic : cloud watch /sns notification  / 
+stress command :stress -y terminal  
+sns //create subscription//
+3)cloud watch// alaram //
+4)cloud watch destination 
+
+1) cloud watch key features are :
+
+1) metrics and alarams: collect and monitor metrics ,set alarams for predefined thresholds(metrics means cpu and disk usage ) 
+
+2) dashboards : create a customize dashboards for centralized view of performance and health
+
+3) centralize logs ,supporting aggregation, searching, and filtering for efficient for log management
+
+4)events : trigger automated actions response to change aws environment
+
+5)insights: query log data interactively and cloud watch insights
+
+6) synthetics : create a canaries to monitor application availability and latency
+
+7) container insights: specialized monitor for containerized  applications
+
+commands:
+
+root user : yum update -y
+           yum install stress -y 
+
+    sns (simple notification service)
+   
+        1) create a topic
+        2) click on subscription 
+        3) cloud watch (create alarm) then select metrics copy instance id and then select CPU utilization option (we can select time for evry )
+        4)stress --cpu 10 -v --timeout 400s
+        5) enabled monitor in ec2 instance
+____________________________________________________________________________________________________________________________________________________________
+               
+
+19/-08-2025//topic : LOAD BALANCER  ( incoming traffic to disturbuting load to multiple servers are called load balancer
+
+* load balancer are three types
+*1) application load balancer (" use when websites applications at layer 7 (http/https)
+
+*2) network load balancer (" tcp connection oriented) *slow * and (udp connection less *fast*)  based applications handel miillions of request per second ultra high performance)
+
+*3) gateway load balancer ("use when have virtual appliances IDS/ips/ firewalls )
+
+OSI MODELS ( OPEN SYSTEM INTTERCONNECTION) :7 layers are : 
+
+1) physical layer 
+2) data link layer
+3)network layer
+4)transport layer : (end to end connections ,tcp (Transmission Control Protocol)and udp (user datagram protacol)udp ex : streaming
+5)session layer
+6)presentation layer
+7) application layer :
+
+   
+
+load balancer work on http protocol
+
+port no : 80 
+
+create security group
+launch two different servers in different region (http and ssh rule insg)
+nginx is a web server .if u want to see  anything in web for sure we need nginx for apache2 for ubuntu defalt ( cd /var/www/html )
+sudo -i 
+yum update -y
+yum install nginx
+the path of nginx is cd /usr/share/nginx/html
+rm index.html 
+vi index.html 
+systemctl status nginx (to check wheather the server is running or not)
+systemctl start nginx (to start nginx server)
+
+
+
+2)* network load balancer : works at network layer (layer 4of osi model) and rotes traffic based only on up address and port ,not on the content of request
+
+
+port 80 
+ssh 22
+two different servsers
+
+24/08/2025// topic : autoscaling
+
+AUTO SCALING  : when demands needs automatically increase servers and decrease servers is called auto scaling 
+
+steps : 1)security group
+        2) ec2 instance
+        3) target group
+        4) application load balancer
+        5) amazon machine image(ami)// why we use ami //to get the data from next server double server//
+        6) template(Launch template for third or fourth server need
+Choose a launch template that contains the instance-level settings, such as the Amazon Machine Image (AMI), instance type, key pair, and security groups) 
+
+        7)auto scaling 
+
+____________________________________________________________________________________________________________________________________________________________
+
+
+topic : RDS (relational database services)
+
+RDS ENGINES ARE 8 types are :
+
+
+1)AUROR MYSQUL
+2)AUROR POST SQUL
+3)MY SQUL
+4)POSTGRE SQUL
+5)MARIA DB
+6)ORACEL DB
+7)MICROSOFT SQUL
+8)IBM DB2 
+ 
+WHAT IS CLUSTERS? 
+A) COMINING 3 OR MORE SERVERS WORKING TOGETHER IS CALLED CLUSTER
+
+
+ 28-08-2025//topic : RDS STORAGE AUTO SCALING
+
+
+* free available space less than 10 percent then it allocated storage
+*after storage modifications if u want modify again u should wait 6 hours to take place
+ 
+if it is greater than are : 
+* 5GB below are automatically increased
+* 10 percentage } then only allocated autoscaling  storage
+
+ZERO DOWNTIME : THE SEREVER IS UN AVAILABLE FOR 0 SENONDS AND 0 MINUTES AND 0 HOURS IS CALLED ZERO DOWNTIME
+
+elastic cache:  ✅ Simple Example:
+Imagine you have an e-commerce website.
+
+Every time a user searches for “iPhone 15,” your app queries the database to fetch product details (price, stock, description).
+
+This takes time and increases database load if thousands of users search the same product.
+
+👉 With ElastiCache (Redis):
+
+The first time, the database result is stored in cache memory.
+
+Next time, users get the product details directly from ElastiCache in milliseconds, without hitting the database.
+
+This reduces latency and improves scalability. 🚀
+
+____________________________________________________________________________________________________________________________________________________________
+
+
+30-08-2025// TOPIC : NO SQUL DATABASE
+
+
+_________________________________________________________________________________________________________________________________________________________
+
+
+2-09-2025// topic : s3 simple storage service /  s3 import backup/
+
+*s3 (simple storage service)  is a object storage to save files retrieve any amount of data anywhere
+
+* two important terminology in aws s3 are:
+
+* buckets
+* objects
+
+# s3 storage classes are :
+
+1)* aws S3 Standard : offers high durability and (high cost) performance object storage for frequently accessed data
+
+2)* s3 Standard IA : it is for infrequent access data but rapid action when needed 
+
+
+3)* s3 Intelligent tiering : it works on both frequently access tier and it offers infrequently access tier 
+ # it absorbs the access pattern  of data and automictically moved in frequently or infrequently 
+frequently (costly)
+infrequently (much cheaper)
+
+4)* one zone infrequent access : data should be stored in one zone only .
+
+
+5)* glacier : is a low cost storage services that provides secure and durable storage for data archiving online backup
+
+6) deep achieve glacier : is much cheaper than all >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+some points on s3 are :
+
+* s3 is used for storage purpose
+* s3 is object storage
+*we can storage flat files in s3
+* we can't execute s3 files 
+#* we cant attach s3 to ec2 instance
+* s3 providing unlimited storage
+* we cannot install any software in s3
+* bucket contains object (obj = files)
+#*s3 is serverless bucket 
+
+# by default buckets are private if we required we can make public 
+
+some concepts in s3 are :
+
+#) versioning : is updating new features in software  /ever version has unique id 
+
+#) static web hosting : in this only index .html files we can host static web hosting 
+
+#) class and tiers : 1) s3 standard 2)s3 intelligent tiering 3) s3 standard 1A 4) s3 one zone 5) s3 glacier 6) deep achieve glacier
+
+#) transferring acceleration : s3 can speed up content transfers from amazon s3 by much faster 50 - 500% for long distance transfer of lager objects
+
+#) multi part upload : in single 20 gb file it can divide into parts and upload it 
+
+#) lifecycle  configuration : to reduce the company's cost 
+
+what is ARN (  amazon resource name ) imp 
+
+#) encryption : means it has protected by password or some authorization required (kms) key management service /
+
+IMP/#) S3 BUCKET POLICES : polices means permissions 
+
+policies are two types : 1) system generated (yellow colour boxes)/default 
+                         2) custom generated (blue colour)
+
+#) ACL (ACESS CONTROL LIST) : permissions lo block all public aceess /default so we can change permissions // we can allocate permissions 
+
+#) cross region republication : source to destination// share documents from us company to india company share availe anta we use this . cross region is only one way
+from one location to any location and one aws acctount other aws account
+____________________________________________________________________________________________________________________________________________________________
+
+05-9-2025// topic: IAM (IDENTIY ACESS MANAGEMENT) and cloud trail 
+
+four
+
+1) users  : creating users 
+2) GROUPS 
+3) policy's :  (permissions)
+4) ROLES : (srvices attach)
+ 
+
+08-09-2025/ TOPIC : IAM(identity access management )entire free service is IAM and CLOUD TRAIL 
+
+
+User → A person/application with permanent credentials.
+
+Group → A collection of users (used for easier permission management). 
+
+Role → Temporary identity with specific permissions, assumed by users/services.
+
+Policy → The rules (JSON) that define what actions are allowed/denied
+
+
+CLOUD TRAIL : cloud trail is a shows the employs works data on time stamp with instance id and ip address.
+
+
+09-09-2025/topic: SERVER LESS LAMBDA
+
+#) AWS LAMBDA : is a fully managed compute services that runs your code in response to an event or an time based interval
+
+#pay for waht you u use
+
+
+#) lambda when will be run means that time only charged
+
+
+
+10/09/2025// topic : pass(platform as a service ) , beam stack (elastic beam stack)
+
+
+pass : cloud provides platform for running apps
+
+* include compute ,networking, storage, runtime ,environment ,scaling ,redundancy ,security, updates, patching, and maintance
+
+*the client just needs to bring the code to run
+
+in paas { we need take care of application means ___(code) and data______(database) and rest of all things managed by cloud
+
+
+
+install java 21 
+install maven build purpose /why we use maven ? to convert from human understanding to system understanding so we use maven tool for java code 
+install git
+
+maven commands :1) mvn validate ( to verify correct syntax in java code to validate )
+
+2) mvn compaile source code
+
+3) mvn test 
+
+4) mvn package (used to human understanding to system understanding)generate var file that is artifact 
+_______________________________________________________
+16-09-2025/topic : vpc peering : 
+ 
+
+web server :
+ 
+Perring connection
+
+select first copy vpc cidr of two vpc (default 172.31.0.0/16  // custom 10.0.0.0/18)
+
+
+in route table add routes perring connection
+
+private ip copy
+
+curl   privateip: 80
+
+____________________________________________
+
+17-09-2025/ topic : transit gateway // if u have multiple vpc transisit gateway more than  is it suitable like to communicate A-B-C //we can also connect through private servers also 
+
+_____________________________________________________________________________________________________________________________________________
+
+18-09-2025/ topic : ROUTE 53 || (DNS: domain name system)
+
+||go daddy and hostinger and aws also provides dns || in.are..com for websites with 
+
+customisezed names
+
+
+22-09-2025// topic route 53
+
+
+23-09-2025// topic :ACM IN AWS (AWS CERTIFICATE MANAGER)
+
+_________________________________________________
+24-09-2025 topic : WAF (web applicatin firewall) and cloud front
+
+27-09-2025/ topic : ml services
+
+1) amazon comprehend
+2) amazon lex
+3)amazon Kindra
+4) translate
+5) 
+
+
+29-09-2025// topic : cloud front
+______________________________________________________
+
+TERRAFOM : IAAC tool (infrastructure as a code )
+
+NOTE : AMI ID IS DIFFERENT FROM ONE REGION TO ANOTHER 
+
+# Reusability code 
+
+TERRAFORM STRUCTURE :
+
+1) PROVIDER SECTION:(CLOUD PROVIDER AND REGION & IAM )
+
+2) VARIABLES : USER TO STORE VALUES
+
+3) RESOURCE : SERVICES CREATE 
+
+Terraform blocks :
+                
+1) main.tf
+           provider "aws" {
+           region = "us-east-1"
+           access_key = ""
+           secret_key = ""
+          }
+resource "aws_instance" "one" {
+tags = {
+       Name = "my-instance-1"
+       Environment = "Dev"
+       project = "SWiggy"
+}
+
+ami = "ami -id"
+
+instance_type = "t2.micro"
+key_name = "three"
+availability zone = "us-east-1b" (subnet declarartion )
+}
+root_block_device {
+volume_size =10            || terraform fmt ista indet
+}                          entation vsatide code lo 
+}                           but we cannot change               [availability zone once declared]
+
+__ terraform commands :________ {i=INIT ,P= PLAN , A= APPLY D= DESTROY} :
+
+1) terraform init : intilize the cloud provider download avthiye install (oksarire intlize )
+
+2) terraform plan : code verify chesies emaina errors unta cheptundie emayina modify chesta check cheskoavile
+
+3) TERRAFORM APPLY : RESOURCE CREATE AYYTIE (yes) or (--auto-approve) APPLY CHESTARAO ||state files ||
+             
+4)terraform destroy : delete (--auto-approve)
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* 
+
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* 
+
+
+

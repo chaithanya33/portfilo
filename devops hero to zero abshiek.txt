@@ -1,0 +1,42 @@
+devops hero to zero abshiek 
+
+containers : dockers container are light weight in system
+
+* they will have a minimal operating system /container is 
+
+package of application libraries and system depends
+
+for EX: we take snapshots from vm s it has basic 1 gb or 2 gb so while consider containers it will get converted into 
+MBS 500 or 600 mb depends on container  // significant size drop size of image 
+
+* docker work flow : command
+ ___containers___dockerfile__docker engine
+ 
+_____image___agin some docker commands it make container
+
+
+docker flow : 1st stage is dockerfile
+
+              2nd     create a image /execute this image
+
+              3rd again container 
+
+drawbacks of docker :
+
+docker depends on docker engine if it is fails (spof) single point of failure //containers will not responding //
+
+to avoid single point of failures : BUILDdat is (spof ) simplecity , podman ,it will build docker images
+
+
+
+docker daemon is heart of docker engine 
+
+docker image is like a snapshot//with docker image they can execute create docker container without installing single dependency they can run any platform
+
+*what is difference between docker and GitHub?
+A) GitHub is a version control system to store the source code and docker is version control platform to store docker images
+
+
+
+
+
