@@ -4,132 +4,197 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chaithanya Gopineedi | Portfolio</title>
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: #f9fafb;
       color: #111827;
       line-height: 1.6;
     }
+
     header {
       background: #1e90ff;
       color: white;
       padding: 30px 20px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
-    nav {
-      margin-top: 15px;
-    }
+
     nav a {
       margin: 0 15px;
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
       max-width: 900px;
       margin: 40px auto;
       padding: 20px;
     }
+
     h2 {
-      border-bottom: 2px solid #1e90ff;
+      border-bottom: 3px solid #1e90ff;
       padding-bottom: 5px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
+
     .box {
       background: #e3f2fd;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
     }
+
     ul {
-      list-style-type: square;
       margin-left: 20px;
+      list-style-type: square;
     }
-    footer {
-      background: #1e90ff;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
+
     a {
       color: #1e90ff;
       text-decoration: none;
+      font-weight: 500;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    /* Projects hover card */
+    .project-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    .project-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .project-link {
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <h1>Chaithanya Gopineedi</h1>
-    <p>DevOps Enthusiast | Electronics & Communication Engineering Graduate</p>
+    <p>Entry-Level DevOps Engineer | Electronics & Communication Engineering Graduate</p>
     <nav>
       <a href="#about">About</a>
-      <a href="#education">Education</a>
       <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <!-- About Me -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a DevOps fresher with a background in <strong>Electronics and Communication Engineering</strong> 
-       and certified in <strong>NPTEL Cloud Computing</strong>.  
-       My passion for automation, scalability, and cloud-native technologies led me to explore DevOps.  
-       I’m not just looking for a job — I’m ready to add value from day one.  
-       With a solid foundation, practical DevOps skills, and strong work ethics, I aim to contribute effectively in real-world projects.</p>
+    <p>
+      Entry-level DevOps Engineer skilled in SDLC, CI/CD pipelines, EC2, Docker, and AWS services.  
+      Looking to join a growth-oriented organization where I can enhance deployment automation and improve system reliability.  
+      I bring strong skills in Linux, version control using Git & GitHub, cloud infrastructure management, and DevOps workflow automation.
+    </p>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="box">
-      <p><strong>Bachelor of Technology (B.Tech) in Electronics and Communication Engineering</strong></p>
-      <p>Centurion University of Technology and Management</p>
-      <p>CGPA: <strong>7.83</strong> | Year of Graduation: <strong>2025</strong></p>
-    </div>
-  </section>
-
+  <!-- Technical Skills -->
   <section id="skills">
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
     <div class="box">
       <ul>
-        <li>🔧 Version Control: Git, GitHub</li>
-        <li>⚙️ CI/CD Tools: Jenkins</li>
-        <li>📦 Containers & Orchestration: Docker, Kubernetes</li>
-        <li>🛠️ Infrastructure as Code: Ansible, Terraform</li>
-        <li>☁️ Cloud Platforms: AWS (Foundational)</li>
-        <li>💻 Scripting: Bash, Python</li>
+        <li><strong>Methodologies:</strong> SDLC</li>
+        <li><strong>Programming Languages:</strong> Python (Basics)</li>
+        <li><strong>SCM:</strong> Git, GitHub</li>
+        <li><strong>Cloud Services:</strong> AWS (EC2, S3, Lambda, IAM, VPC, WAF, RDS-MySQL, ASG)</li>
+        <li><strong>Security Tools:</strong> Trivy, SonarQube, Snyk, Nexus Repository</li>
+        <li><strong>Build Tool:</strong> Maven</li>
+        <li><strong>IaC:</strong> Terraform</li>
+        <li><strong>CI/CD:</strong> Jenkins</li>
+        <li><strong>Containerization:</strong> Docker</li>
+        <li><strong>Orchestration:</strong> Kubernetes (AWS EKS)</li>
+        <li><strong>Scripting:</strong> Shell scripting, Python (Basics)</li>
+        <li><strong>Web Servers:</strong> Nginx</li>
+        <li><strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch</li>
+        <li><strong>Operating Systems:</strong> Linux, Ubuntu, Windows</li>
+        <li><strong>Configuration Management:</strong> Ansible</li>
       </ul>
     </div>
   </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <div class="project-title">1) Secure CI/CD Pipeline for Node.js using Jenkins, Docker & AWS</div>
+      <ul>
+        <li>Developed end-to-end CI/CD pipeline for Zomato-clone Node.js app using Jenkins.</li>
+        <li>Integrated Trivy, SonarQube, and Snyk for vulnerability scanning & code quality checks.</li>
+        <li>Docker image pushed only after all security checks pass.</li>
+        <li>Achieved <strong>75% reduction in vulnerabilities</strong>.</li>
+        <li><strong>Tech Stack:</strong> GitHub, Jenkins, EC2, SonarQube, Snyk, Trivy</li>
+      </ul>
+      <p class="project-link">
+        <strong>GitHub Repo:</strong> <a href="https://github.com/chaithanya33/docker-project" target="_blank">View on GitHub</a>
+      </p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">2) Docker Stateful Blood Bank Web Application</div>
+      <ul>
+        <li>Deployed a stateful blood bank app with user sign-up, login & data storage.</li>
+        <li>Configured AWS RDS (MySQL) for persistent storage.</li>
+        <li>Implemented Docker-based deployment on AWS EC2.</li>
+        <li><strong>Tech Stack:</strong> EC2, Docker, RDS, GitHub</li>
+      </ul>
+      <p class="project-link">
+        <strong>GitHub Repo:</strong> <a href="https://github.com/chaithanya33/blood-bank" target="_blank">View on GitHub</a>
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <h2>Achievements</h2>
     <div class="box">
       <ul>
-        <li>
-          <a href="https://drive.google.com/file/d/1dozzu8iYmngAs-AoqAPAYdnCkW27LXce/view?usp=drivesdk" target="_blank">
-            NPTEL Cloud Computing
-          </a>
-        </li>
-        <li>
-          <a href="https://drive.google.com/file/d/1vUnT1B_fChXjTLxzJnYGrSI7FNva1KNQ/view?usp=drivesdk" target="_blank">
-            AWS Foundational Training
-          </a>
-        </li>
+        <li>Achieved <strong>NPTEL Cloud Computing</strong> certification with 63%</li>
+        <li>Participated in college Hackathon and cleared Problem Statement Level-1</li>
+        <li>Completed <strong>AWS Essentials</strong> certification gaining foundational cloud knowledge</li>
       </ul>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
     <p><strong>Email:</strong> <a href="mailto:chaithanyagopineedi@gmail.com">chaithanyagopineedi@gmail.com</a></p>
@@ -138,8 +203,10 @@
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chaithanya-gopineedi" target="_blank">linkedin.com/in/chaithanya-gopineedi</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Chaithanya Gopineed | All Rights Reserved</p>
+    <p>© 2025 Chaithanya Gopineedi | All Rights Reserved</p>
   </footer>
+
 </body>
 </html>
